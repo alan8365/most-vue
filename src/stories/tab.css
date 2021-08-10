@@ -1,0 +1,25 @@
+.most-tab {
+  font-size: 22px;
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+
+  border: 0;
+  border-radius: 3em;
+
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+
+  height: 57px;
+  width: 180px;
+
+  background-color: #ffffff;
+  color: black;
+
+  box-shadow: #C1C1C1 5px 5px 0px 0px;
+}
+.most-tab--selected {
+  box-shadow: #E6C556 5px 5px;
+}
+.most-tab--normal {
+}
