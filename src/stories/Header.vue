@@ -3,7 +3,7 @@
     <div class="most-banner">
       <div>
         <img
-          src="../assets/banner.jpg"
+          src="../assets/most-banner.png"
           alt=""
         >
       </div>
@@ -65,11 +65,11 @@ export default {
   methods: {
     onChangePage(pageNumber, event) {
       // props.currentIndex = pageNumber;
-      console.log(this.currentIndex);
       this.currentIndex = pageNumber;
       this.tabs.forEach((tab, index) => {
         tab.selected = pageNumber === index;
       });
+      console.log(this.currentIndex);
     },
   },
 };

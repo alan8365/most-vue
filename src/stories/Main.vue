@@ -1,41 +1,41 @@
 <template>
-  <button
-    type="button"
-    :class="classes"
-    :style="style"
-    @click="onClick"
-  >
-    <font-awesome-icon
-      v-if="iconName"
-      icon="chevron-up"
-    />
-    {{ label }}
-  </button>
+  <div class="most-bg-panel">
+    <footer class="row">
+      <div class="most-credit col-6">
+        <p>網站建置：國立臺中科技大學 資訊管理系</p>
+        <p>網站製作：路西</p>
+      </div>
+
+      <div class="col-4" />
+
+      <div class="col-2">
+        <most-tab
+          label="back to top"
+          icon-name="chevron-up"
+          style="border-radius: 10px"
+        />
+      </div>
+    </footer>
+  </div>
 </template>
 
 <script>
-import './tab.css';
+import './main.css';
 import {reactive, computed} from 'vue';
 
+import MostTab from './Tab';
+
 export default {
-  name: 'MostTab',
+  name: 'MostMain',
+
+  components: {
+    MostTab,
+  },
 
   props: {
-    label: {
-      type: String,
-      required: true,
-    },
-    selected: {
-      type: Boolean,
-      default: false,
-    },
     backgroundColor: {
       type: String,
       default: '#ffffff',
-    },
-    iconName: {
-      type: String,
-      default: '',
     },
   },
 
