@@ -1,5 +1,12 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}</button>
+  <button
+    type="button"
+    :class="classes"
+    :style="style"
+    @click="onClick"
+  >
+    {{ label }}
+  </button>
 </template>
 
 <script>
@@ -7,7 +14,7 @@ import './tab.css';
 import {reactive, computed} from 'vue';
 
 export default {
-  name: 'most-tab',
+  name: 'MostTab',
 
   props: {
     label: {
@@ -20,6 +27,7 @@ export default {
     },
     backgroundColor: {
       type: String,
+      default: '#ffffff',
     },
   },
 

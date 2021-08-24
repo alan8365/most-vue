@@ -10,16 +10,17 @@
   display: inline-block;
   line-height: 1;
 
-  height: 57px;
-  width: 180px;
+  height: 2.5em;
+  width: 100%;
+  max-width: 180px;
 
   background-color: #ffffff;
   color: black;
 
-  box-shadow: #C1C1C1 5px 5px 0px 0px;
+  box-shadow: #C1C1C1 5px 5px;
 }
 .most-tab--selected {
-  box-shadow: #E6C556 5px 5px;
+  box-shadow: #FFDB5F 5px 5px;
 }
 .most-tab--normal {
 }

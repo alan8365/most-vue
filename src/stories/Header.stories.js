@@ -1,28 +1,27 @@
-import MyHeader from './Header.vue';
+import MostHeader from './Header.vue';
 
 export default {
-  title: 'Example/Header',
-  component: MyHeader,
+  title: 'MOST/Header',
+  component: MostHeader,
+  argTypes: {
+    onClick: {},
+    onChangePage: {},
+  },
 };
 
 const Template = (args) => ({
   // Components used in your story `template` are defined in the `components` object
-  components: {MyHeader},
+  components: {MostHeader},
   // The story's `args` need to be mapped into the template through the `setup()` method
   setup() {
     // Story args can be spread into the returned object
-    return {...args};
+    return {args};
   },
   // Then, the spread values can be accessed directly in the template
-  template: '<my-header :user="user" />',
+  template: '<most-header v-bind="args" />',
 });
 
-export const LoggedIn = Template.bind({});
-LoggedIn.args = {
-  user: {},
-};
-
-export const LoggedOut = Template.bind({});
-LoggedOut.args = {
-  user: null,
+export const Normal = Template.bind({});
+Normal.args = {
+  currentPage: '最新消息',
 };
