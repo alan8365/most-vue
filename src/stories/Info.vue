@@ -1,6 +1,6 @@
 <template>
   <div class="most-info-bg">
-    <div class="col-6">
+    <div :class="titleLengthCalss">
       <div class="most-info-title">
         <div>
           <div>{{ title }}</div>
@@ -31,7 +31,7 @@
 
 <script>
 import './info.css';
-import {reactive} from 'vue';
+import {reactive, computed} from 'vue';
 
 export default {
   name: 'MostInfo',
@@ -40,6 +40,10 @@ export default {
     title: {
       type: String,
       required: true,
+    },
+    titleFull: {
+      type: Boolean,
+      default: false,
     },
     updateTime: {
       type: Date,
@@ -57,6 +61,10 @@ export default {
     props = reactive(props);
     console.log(props);
     return {
+      titleLengthCalss: computed(() => ({
+        'col-6': !props.titleFull,
+        'col-12': props.titleFull,
+      })),
       onClick() {
         emit('click');
       },

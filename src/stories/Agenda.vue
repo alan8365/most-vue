@@ -1,31 +1,104 @@
 <template>
   <most-main>
     <most-info
-      title="最新資訊"
+      title="110年度科技部科教發展及國際合作司 應科學學門成果發表會 會議議程表"
       :update-time="new Date('2020-10-31')"
-      content-text="注意事項：
-        1.請將所有檔案請打包成壓縮檔上傳(可接受的格式有*.zip、*.rar、*.7z)。
-        口頭發表：請上傳 (1)摘要、(2)10頁內精簡報告、(3)簡報PPT
-        海報發表：請上傳 摘要
-        檔名命名請以各主持人場次之議程編號為命名(以公文內容公布為準)。
-        例如：
-        口頭報告者(如：A01)，所繳交之壓縮檔摘要命名為：A01.zip、A01.rar或A01.7z。
-        海報發表者(如：P01)，所繳交之壓縮檔則命名為P01.zip、P01.rar或P01.7z。
-        產學型計畫發表者(如：I01)，所"
-    />
-
-    <most-info
-      title="網站正式啟用!即日起開放報名!"
-      :update-time="new Date('2020-10-31')"
-      content-text="「104年度應用科學教育學門成果發表暨研習會」官方網站於09月14日正式啟用，報名日期自即日起至10月20日(星期二)止；
-      開放報告上傳日期請注意最新消息！"
+      content-text=""
+      :title-full="true"
     >
       <template #bottom>
         <div class="col-12">
           <button
             class="btn most-link-button"
-            v-text="'點此進入線上報名頁面'"
+            v-text="'點此下載詳細議程表'"
           />
+        </div>
+
+        <div class="container most-agenda">
+          <div class="row most-agenda-title">
+            <div
+              class="col-2 "
+              :class="verticelCenter"
+            >
+              11/19
+            </div>
+            <div
+              class="col"
+              :class="verticelCenter"
+            >
+              第一天 、11月19日(星期五)
+            </div>
+          </div>
+
+          <div class="row most-agenda-header">
+            <div
+              class="col-4"
+              :class="verticelCenter"
+            >
+              活動時間
+            </div>
+            <div
+              class="col"
+              :class="verticelCenter"
+            >
+              活動議程
+            </div>
+          </div>
+
+          <div class="row most-agenda-row">
+            <div
+              class="col-4"
+              :class="verticelCenter"
+            >
+              10:00~10:10
+            </div>
+            <div
+              class="col"
+              :class="verticelCenter"
+            >
+              報到 (中商大樓二樓)
+            </div>
+          </div>
+
+          <div class="row most-agenda-row">
+            <div
+              class="col-4"
+              :class="verticelCenter"
+            >
+              09:30~10:00
+            </div>
+            <div
+              class="col"
+              :class="verticelCenter"
+            >
+              <div class="most-agenda-row-text">
+                <p>長官致詞 (中商大樓國際會議廳)</p>
+                <p>國立臺中科技大學 謝俊宏校長</p>
+                <p>科教發展及國際合作司 周倩司長</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row most-agenda-row">
+            <div
+              class="col-4"
+              :class="verticelCenter"
+            >
+              12:00~13:30
+            </div>
+            <div
+              class="col"
+              :class="verticelCenter"
+            >
+              用餐會場(中商大樓二樓)
+            </div>
+            <div
+              class="col"
+              :class="verticelCenter"
+            >
+              午餐
+            </div>
+          </div>
         </div>
       </template>
     </most-info>
@@ -59,10 +132,8 @@ export default {
   setup(props, {emit}) {
     props = reactive(props);
     return {
-      classes: computed(() => ({
-        'most-tab': true,
-        'most-tab--selected': props.selected,
-        'most-tab--normal': !props.selected,
+      verticelCenter: computed(() => ({
+        'd-flex flex-column align-items-center justify-content-center': true,
       })),
       style: computed(() => ({
         backgroundColor: props.backgroundColor,
