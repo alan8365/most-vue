@@ -1,21 +1,15 @@
 <template>
-  <div class="container">
-    <Header />
-
-    <Main />
-  </div>
+  <most-news />
 </template>
 
 <script>
 import 'bootstrap/dist/css/bootstrap.css';
-import Header from './stories/Header.vue';
-import Main from './stories/Main.vue';
+import MostNews from './stories/News.vue';
 
 export default {
   name: 'App',
   components: {
-    Header,
-    Main,
+    MostNews,
   },
 };
 </script>

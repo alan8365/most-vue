@@ -1,0 +1,15 @@
+.most-alert-bg{
+  color: white;
+  background-color: #FF6565;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 10px;
+
+  margin-bottom: 25px;
+
+  padding: 20px;
+
+  box-shadow: #c1c1c1 5px 5px;
+}
