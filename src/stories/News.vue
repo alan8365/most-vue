@@ -1,5 +1,5 @@
 <template>
-  <most-main>
+  <div>
     <div class="most-alert-bg">
       <font-awesome-icon
         icon="exclamation-triangle"
@@ -29,14 +29,16 @@
     >
       <template #bottom>
         <div class="col-12">
-          <button
-            class="btn most-link-button"
-            v-text="'點此進入線上報名頁面'"
-          />
+          <router-link to="/sign">
+            <button
+              class="btn most-link-button"
+              v-text="'點此進入線上報名頁面'"
+            />
+          </router-link>
         </div>
       </template>
     </most-info>
-  </most-main>
+  </div>
 </template>
 
 <script>
@@ -44,13 +46,11 @@ import './news.css';
 import {reactive, computed} from 'vue';
 
 import MostInfo from './Info';
-import MostMain from './Main';
 
 export default {
   name: 'MostNews',
 
   components: {
-    MostMain,
     MostInfo,
   },
 

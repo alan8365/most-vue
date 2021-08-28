@@ -1,5 +1,5 @@
 <template>
-  <most-main>
+  <div>
     <most-info>
       <template #bottom>
         <iframe
@@ -12,20 +12,18 @@
         >Loading…</iframe>
       </template>
     </most-info>
-  </most-main>
+  </div>
 </template>
 
 <script>
 import {reactive} from 'vue';
 
 import MostInfo from './Info';
-import MostMain from './Main';
 
 export default {
   name: 'MostUpload',
 
   components: {
-    MostMain,
     MostInfo,
   },
 

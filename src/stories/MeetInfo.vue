@@ -1,5 +1,5 @@
 <template>
-  <most-main>
+  <div>
     <most-info
       title="會議室連結"
       content-text="時間：2015年11月14、15日(星期六、日)
@@ -70,14 +70,13 @@
 1。需全程參與，出席狀況會作為未來計畫申請審查之重要參考。若不克參加本次成果發表會議，請敘明不可抗拒之原因，以郵
 寄或傳真向大會提出請假申請。"
     />
-  </most-main>
+  </div>
 </template>
 
 <script>
 import './meetInfo.css';
 import {reactive, computed} from 'vue';
 
-import MostMain from './Main';
 import MostInfo from './Info';
 import MostMeetButton from './MeetButton';
 
@@ -85,7 +84,6 @@ export default {
   name: 'MostMeetInfo',
 
   components: {
-    MostMain,
     MostInfo,
     MostMeetButton,
   },

@@ -1,5 +1,5 @@
 <template>
-  <most-main>
+  <div>
     <most-info
       title="110年度科技部科教發展及國際合作司 應科學學門成果發表會 會議議程表"
       :update-time="new Date('2020-10-31')"
@@ -102,7 +102,7 @@
         </div>
       </template>
     </most-info>
-  </most-main>
+  </div>
 </template>
 
 <script>
@@ -110,13 +110,11 @@ import './agenda.css';
 import {reactive, computed} from 'vue';
 
 import MostInfo from './Info';
-import MostMain from './Main';
 
 export default {
   name: 'MostAgenda',
 
   components: {
-    MostMain,
     MostInfo,
   },
 

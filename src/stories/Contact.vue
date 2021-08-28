@@ -1,5 +1,5 @@
 <template>
-  <most-main>
+  <div>
     <most-info
       title="行政事務"
       content-text="徐芳玉
@@ -23,20 +23,18 @@
 </ul>
 "
     />
-  </most-main>
+  </div>
 </template>
 
 <script>
-import {reactive, computed} from 'vue';
+import {reactive} from 'vue';
 
 import MostInfo from './Info';
-import MostMain from './Main';
 
 export default {
   name: 'MostContact',
 
   components: {
-    MostMain,
     MostInfo,
   },
 
@@ -52,19 +50,8 @@ export default {
   setup(props, {emit}) {
     props = reactive(props);
     return {
-      classes: computed(() => ({
-        'most-tab': true,
-        'most-tab--selected': props.selected,
-        'most-tab--normal': !props.selected,
-      })),
-      style: computed(() => ({
-        backgroundColor: props.backgroundColor,
-      })),
       onClick() {
         emit('click');
-      },
-      backToTop() {
-        window.scrollTo(0, 0);
       },
     };
   },

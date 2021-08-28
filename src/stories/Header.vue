@@ -16,12 +16,14 @@
           :key="tab.label"
           class="col-2"
         >
-          <most-tab
-            :label="tab.label"
-            :selected="index == currentIndex"
-            v-bind="tab"
-            @click="onChangePage(index)"
-          />
+          <router-link :to="tab.link || '/'">
+            <most-tab
+              :label="tab.label"
+              :selected="index == currentIndex"
+              v-bind="tab"
+              @click="onChangePage(index)"
+            />
+          </router-link>
         </div>
       </div>
     </div>
@@ -51,12 +53,12 @@ export default {
   data() {
     return {
       tabs: [
-        {label: '最新消息'},
-        {label: '會議流程'},
-        {label: '會議資訊'},
-        {label: '線上報名'},
-        {label: '上傳資料'},
-        {label: '聯絡我們'},
+        {label: '最新消息', link: '/'},
+        {label: '會議流程', link: '/agenda'},
+        {label: '會議資訊', link: '/meet-info'},
+        {label: '線上報名', link: '/sign'},
+        {label: '上傳資料', link: '/upload'},
+        {label: '聯絡我們', link: '/contact'},
       ],
       currentIndex: 0,
     };
@@ -69,7 +71,6 @@ export default {
       this.tabs.forEach((tab, index) => {
         tab.selected = pageNumber === index;
       });
-      console.log(this.currentIndex);
     },
   },
 };

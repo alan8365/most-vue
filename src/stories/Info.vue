@@ -69,7 +69,6 @@ export default {
 
   setup(props, {emit}) {
     props = reactive(props);
-    console.log(props);
     return {
       titleLengthCalss: computed(() => ({
         'col-6': !props.titleFull,

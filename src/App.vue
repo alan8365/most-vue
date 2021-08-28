@@ -4,7 +4,12 @@
   <!-- <most-meet-info /> -->
   <!-- <most-sign /> -->
   <!-- <most-upload /> -->
-  <most-contact />
+  <!-- <most-contact /> -->
+  <div class="container">
+    <most-header />
+
+    <most-main />
+  </div>
 </template>
 
 <script>
@@ -14,7 +19,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 // import MostMeetInfo from './stories/MeetInfo.vue';
 // import MostSign from './stories/Sign.vue';
 // import MostUpload from './stories/Upload.vue';
-import MostContact from './stories/Contact.vue';
+// import MostContact from './stories/Contact.vue';
+import MostHeader from './stories/Header';
+import MostMain from './stories/Main';
 
 export default {
   name: 'App',
@@ -24,7 +31,9 @@ export default {
     // MostMeetInfo,
     // MostSign,
     // MostUpload,
-    MostContact,
+    // MostContact,
+    MostHeader,
+    MostMain,
   },
 };
 </script>
