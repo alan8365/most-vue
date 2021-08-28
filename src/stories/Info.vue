@@ -1,7 +1,10 @@
 <template>
   <div class="most-info-bg">
     <div :class="titleLengthCalss">
-      <div class="most-info-title">
+      <div
+        v-if="title"
+        class="most-info-title"
+      >
         <div>
           <div>{{ title }}</div>
           <!-- TODO RWD updated time -->
@@ -16,7 +19,10 @@
       </div>
     </div>
 
-    <div class="most-info-content">
+    <div
+      v-if="contentText"
+      class="most-info-content"
+    >
       <!-- eslint-disable vue/no-v-html -->
       <p
         v-for="text in getContentTexts()"
@@ -26,7 +32,6 @@
     </div>
 
     <div
-      ref="asd"
       class="most-info-bottom"
     >
       <slot name="bottom" />
@@ -44,7 +49,7 @@ export default {
   props: {
     title: {
       type: String,
-      required: true,
+      default: '',
     },
     titleFull: {
       type: Boolean,
@@ -56,7 +61,7 @@ export default {
     },
     contentText: {
       type: String,
-      required: true,
+      default: '',
     },
   },
 
