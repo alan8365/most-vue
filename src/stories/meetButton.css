@@ -1,0 +1,19 @@
+.most-meet-button{
+  border: none;
+
+  padding: 20px 65px;
+
+  border-radius: 15px;
+
+  box-shadow: #C1C1C1 5px 5px;
+
+  text-decoration: none;
+}
+
+.most-meet-button > p{
+  margin: 0;
+}
+
+.most-meet-button > p:nth-child(2){
+  margin: 30px 0;
+}

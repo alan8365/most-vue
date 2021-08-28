@@ -5,7 +5,11 @@
         <div>
           <div>{{ title }}</div>
           <!-- TODO RWD updated time -->
-          <div>更新時間：{{ getDate() }}</div>
+          <div>
+            <span v-if="updateTime">
+              更新時間：{{ getDate() }}
+            </span>
+          </div>
         </div>
 
         <div />
@@ -13,10 +17,11 @@
     </div>
 
     <div class="most-info-content">
+      <!-- eslint-disable vue/no-v-html -->
       <p
         v-for="text in getContentTexts()"
         :key="text.id"
-        v-text="text"
+        v-html="urlify(text)"
       />
     </div>
 
@@ -47,7 +52,7 @@ export default {
     },
     updateTime: {
       type: Date,
-      required: true,
+      default: undefined,
     },
     contentText: {
       type: String,
@@ -70,8 +75,13 @@ export default {
       },
       getDate() {
         const date = props.updateTime;
-        const formatedDate = `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
-        return formatedDate;
+
+        if (date) {
+          const formatedDate = `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`;
+          return formatedDate;
+        } else {
+          return '';
+        }
       },
       getContentTexts() {
         const contentTexts = props.contentText.split('\n');
@@ -79,6 +89,12 @@ export default {
           contentTexts[index] = contentTexts[index].trim();
         }
         return contentTexts;
+      },
+      urlify(text) {
+        const urlRegex = /(https?:\/\/[^\s]+)/g;
+        return text.replace(urlRegex, function(url) {
+          return '<a href="' + url + '">' + url + '</a>';
+        });
       },
     };
   },

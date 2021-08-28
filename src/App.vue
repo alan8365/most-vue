@@ -1,18 +1,21 @@
 <template>
   <!-- <most-news /> -->
-  <most-agenda />
+  <!-- <most-agenda /> -->
+  <most-meet-info />
 </template>
 
 <script>
 import 'bootstrap/dist/css/bootstrap.css';
 // import MostNews from './stories/News.vue';
-import MostAgenda from './stories/Agenda.vue';
+// import MostAgenda from './stories/Agenda.vue';
+import MostMeetInfo from './stories/MeetInfo.vue';
 
 export default {
   name: 'App',
   components: {
     // MostNews,
-    MostAgenda,
+    // MostAgenda,
+    MostMeetInfo,
   },
 };
 </script>
