@@ -16,10 +16,11 @@
           :key="tab.label"
           class="col-2"
         >
-          <router-link :to="tab.link || '/'">
+          <router-link
+            :to="tab.link || '/'"
+          >
             <most-tab
-              :label="tab.label"
-              :selected="index == currentIndex"
+              :selected="tab.link == currentPath()"
               v-bind="tab"
               @click="onChangePage(index)"
             />
@@ -42,10 +43,10 @@ export default {
   components: {MostTab},
 
   props: {
-    // currentIndex: {
-    //   type: Number,
-    //   default: 0,
-    // },
+    currentIndex: {
+      type: Number,
+      default: 0,
+    },
   },
 
   emits: ['click', 'changePage'],
@@ -60,17 +61,21 @@ export default {
         {label: '上傳資料', link: '/upload'},
         {label: '聯絡我們', link: '/contact'},
       ],
-      currentIndex: 0,
+      // currentIndex: 0,
     };
   },
 
   methods: {
     onChangePage(pageNumber, event) {
       // props.currentIndex = pageNumber;
-      this.currentIndex = pageNumber;
+      console.log(this.$route);
+      // this.props.currentIndex = pageNumber;
       this.tabs.forEach((tab, index) => {
         tab.selected = pageNumber === index;
       });
+    },
+    currentPath() {
+      return this.$route.path;
     },
   },
 };

@@ -2,14 +2,22 @@
   <div>
     <most-info>
       <template #bottom>
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSfeWR1loT7iFKL8Smjk8pdRVOjkTQCa6OOYM8o9m0NBEnAuEg/viewform?embedded=true"
-          width="640"
-          height="1950"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-        >Loading…</iframe>
+        <img
+          id="most-loading"
+          src="../assets/Spinner-1s-200px.svg"
+          alt=""
+        >
+        <div>
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSfeWR1loT7iFKL8Smjk8pdRVOjkTQCa6OOYM8o9m0NBEnAuEg/viewform?embedded=true"
+            width="640"
+            height="1950"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            onload="document.getElementById('most-loading').style.display='none';"
+          />
+        </div>
       </template>
     </most-info>
   </div>
