@@ -21,10 +21,77 @@ header{
   width: 100%;
 }
 
+.most-navbar-collapse{
+  font-family: "ヒラギノ角ゴシック";
+
+  position: fixed;
+
+  background-color: white;
+
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  width: 300px;
+
+  padding: 15px;
+
+  z-index: 100;
+}
+
+.most-navbar-cancel-icon{
+  font-size: 22px;
+}
+
+.most-navbar-link{
+  font-size: 22px;
+  color: black;
+
+  text-align: left;
+
+  margin: 40px 30px;
+}
+
+a.most-non-under{
+  text-decoration: none;
+  color: black;
+}
+
+.most-navbar{
+  background-color: #E6E6E6;
+
+  margin: 10px 0;
+
+  padding-left: 5px;
+}
+
+.most-navbar-show{
+  left: 0;
+}
+
+.most-navbar-hide{
+  left: -300px;
+}
+
+.navbar-toggler{
+  background-color: white;
+}
+
 .most-tab-list{
   background-color: #E6E6E6;
 
   height: auto;
 
   padding: 17px 17px 17px 17px;
+}
+
+/* animation */
+.slide-enter-active,
+.slide-leave-active {
+  transition: left 0.5s ease;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  left: -300px;
 }

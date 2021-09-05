@@ -1,6 +1,9 @@
 <template>
   <div class="most-info-bg">
-    <div :class="titleLengthCalss">
+    <div
+      :class="titleLengthCalss"
+      class="col-xs-12"
+    >
       <div
         v-if="title"
         class="most-info-title"
@@ -71,7 +74,7 @@ export default {
     props = reactive(props);
     return {
       titleLengthCalss: computed(() => ({
-        'col-6': !props.titleFull,
+        'col-md-6': !props.titleFull,
         'col-12': props.titleFull,
       })),
       onClick() {

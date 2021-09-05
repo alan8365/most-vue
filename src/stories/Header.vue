@@ -5,11 +5,65 @@
         <img
           src="../assets/most-banner.png"
           alt=""
+          class="d-none d-sm-block"
+        >
+        <img
+          src="../assets/mobile-banner.png"
+          alt=""
+          class="d-sm-none d-xs-block"
         >
       </div>
     </div>
 
-    <div class="most-tab-list">
+    <div class="most-navbar d-sm-none d-xs-block">
+      <transition name="slide">
+        <div
+          v-if="navbarShow"
+          class="most-navbar-collapse"
+        >
+          <div class="most-navbar-cancel-icon d-flex flex-row-reverse">
+            <button
+              class="btn"
+              @click="navbarHide()"
+            >
+              <font-awesome-icon
+                icon="times"
+              />
+            </button>
+          </div>
+          <div
+            v-for="tab in tabs"
+            :key="tab.label"
+            class="most-navbar-link"
+          >
+            <router-link
+              :to="tab.link || '/'"
+              class="most-non-under"
+              @click="navbarHide()"
+            >
+              <div>
+                <font-awesome-icon
+                  icon="caret-right"
+                />
+                {{ tab.label }}
+              </div>
+            </router-link>
+          </div>
+        </div>
+      </transition>
+
+      <nav class="navbar navbar-light">
+        <button
+          class="navbar-toggler"
+          type="button"
+          @click="navbarShow = true"
+        >
+          <span class="navbar-toggler-icon" />
+        </button>
+      </nav>
+    </div>
+
+    <div class="most-tab-list d-none d-sm-block">
       <div class="row gx-3">
         <div
           v-for="(tab, index) in tabs"
@@ -61,6 +115,7 @@ export default {
         {label: '上傳資料', link: '/upload'},
         {label: '聯絡我們', link: '/contact'},
       ],
+      navbarShow: true,
       // currentIndex: 0,
     };
   },
@@ -75,6 +130,9 @@ export default {
     },
     currentPath() {
       return this.$route.path;
+    },
+    navbarHide() {
+      this.navbarShow = false;
     },
   },
 };
