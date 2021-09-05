@@ -34,6 +34,10 @@ import MostInfo from './Info';
 export default {
   name: 'MostContact',
 
+  metaInfo: {
+    title: '聯絡我們',
+  },
+
   components: {
     MostInfo,
   },

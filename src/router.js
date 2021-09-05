@@ -8,7 +8,7 @@ import MostContact from './stories/Contact.vue';
 
 
 export const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes: [
     {path: '/', component: MostNews},
     {path: '/agenda', component: MostAgenda},

@@ -1,3 +1,7 @@
+body{
+  background-color: #6E6E6E;
+}
+
 .most-bg-panel{
   width: 100%;
   height: auto;
@@ -10,11 +14,6 @@
 
   background-color: #E6E6E6;
 }
-
-.most-credit{
-
-}
-
 
 .most-credit > p {
   margin: 0;
@@ -32,7 +31,7 @@
 .most-link-button{
   color: #5DA8FF;
 
-  border: #5DA8FF 1px solid;
+  border: #5DA8FF 1px dashed;
 
   height: 90px;
   width: 100%;

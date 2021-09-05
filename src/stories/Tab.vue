@@ -55,6 +55,7 @@ export default {
       onClick() {
         emit('click');
       },
+      // TODO click effect
     };
   },
 };

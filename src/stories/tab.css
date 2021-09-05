@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "ヒラギノ角ゴシック W8";
+  font-family: "ヒラギノ角ゴシック";
   src: url("/hiragino-sans/ヒラギノ角ゴシック-W8.ttc")
 }
 
 .most-tab {
   font-size: 22px;
-  font-family: "ヒラギノ角ゴシック W8";
-  font-weight: 700;
+  font-family: "ヒラギノ角ゴシック";
+  font-weight: bold;
 
   border: 0;
   border-radius: 3em;
@@ -24,8 +24,7 @@
 
   box-shadow: #C1C1C1 5px 5px;
 }
+
 .most-tab--selected {
   box-shadow: #FFDB5F 5px 5px;
-}
-.most-tab--normal {
 }

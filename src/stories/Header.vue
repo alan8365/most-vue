@@ -68,7 +68,6 @@ export default {
   methods: {
     onChangePage(pageNumber, event) {
       // props.currentIndex = pageNumber;
-      console.log(this.$route);
       // this.props.currentIndex = pageNumber;
       this.tabs.forEach((tab, index) => {
         tab.selected = pageNumber === index;

@@ -6,6 +6,7 @@ import {faChevronUp, faExclamationTriangle} from '@fortawesome/free-solid-svg-ic
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
 import {router} from './router';
 
+
 library.add(faChevronUp, faExclamationTriangle);
 
 const app = createApp(App);
