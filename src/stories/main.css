@@ -16,6 +16,9 @@ body{
 }
 
 .most-credit > p {
+  font-family: "ヒラギノ角ゴシック";
+  font-weight: bold;
+
   margin: 0;
 
   text-align: left;
@@ -29,10 +32,18 @@ body{
 }
 
 .most-link-button{
+  font-family: "ヒラギノ角ゴシック";
+
   color: #5DA8FF;
 
   border: #5DA8FF 1px dashed;
 
   height: 90px;
   width: 100%;
+}
+
+@media (max-width: 576px) {
+  .most-credit > p {
+    font-size: 14px;
+  }
 }

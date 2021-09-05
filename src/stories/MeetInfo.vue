@@ -74,7 +74,6 @@
 </template>
 
 <script>
-import './meetInfo.css';
 import {reactive, computed} from 'vue';
 
 import MostInfo from './Info';

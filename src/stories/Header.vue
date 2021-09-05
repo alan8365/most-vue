@@ -68,7 +68,7 @@
         <div
           v-for="(tab, index) in tabs"
           :key="tab.label"
-          class="col-2"
+          class="col-sm-4 mb-sm-3 col-md-4 col-lg-2"
         >
           <router-link
             :to="tab.link || '/'"
@@ -115,7 +115,7 @@ export default {
         {label: '上傳資料', link: '/upload'},
         {label: '聯絡我們', link: '/contact'},
       ],
-      navbarShow: true,
+      navbarShow: false,
       // currentIndex: 0,
     };
   },

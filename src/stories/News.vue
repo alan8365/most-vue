@@ -1,8 +1,15 @@
 <template>
   <div>
     <div class="most-alert-bg">
+      <div class="d-sm-none d-xs-block">
+        <font-awesome-icon
+          icon="exclamation-triangle"
+        />
+      </div>
       <font-awesome-icon
         icon="exclamation-triangle"
+        class="d-none d-sm-inline"
+        style="margin-right: 5px"
       />
       <span>網站已於2021/10/31開放報告上傳，請各發表者於本站報告上傳頁面進行上傳。</span>
     </div>
@@ -22,7 +29,7 @@
     />
 
     <most-info
-      title="網站正式啟用!即日起開放報名!"
+      title="網站正式啟用!即日開放報名!"
       :update-time="new Date('2020-10-31')"
       content-text="「104年度應用科學教育學門成果發表暨研習會」官方網站於09月14日正式啟用，報名日期自即日起至10月20日(星期二)止；
       開放報告上傳日期請注意最新消息！"

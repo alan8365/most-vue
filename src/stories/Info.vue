@@ -9,12 +9,36 @@
         class="most-info-title"
       >
         <div>
-          <div>{{ title }}</div>
-          <!-- TODO RWD updated time -->
-          <div>
-            <span v-if="updateTime">
-              更新時間：{{ getDate() }}
-            </span>
+          <div
+            class="d-xl-flex justify-content-between d-none"
+            style="height:100%"
+          >
+            <div class="d-flex align-items-center most-info-title-text">
+              {{ title }}
+            </div>
+            <div class="d-flex align-items-center most-info-time">
+              <span v-if="updateTime">
+                更新時間：{{ getDate() }}
+              </span>
+            </div>
+          </div>
+
+          <div
+            class="d-xl-none d-block p-1"
+            style="height:100%"
+          >
+            <div
+              class="most-info-title-text"
+            >
+              {{ title }}
+            </div>
+            <div
+              class="most-info-time"
+            >
+              <span v-if="updateTime">
+                更新時間：{{ getDate() }}
+              </span>
+            </div>
           </div>
         </div>
 

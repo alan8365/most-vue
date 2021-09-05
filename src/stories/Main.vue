@@ -8,9 +8,9 @@
         <p>網站製作：路西</p>
       </div>
 
-      <div class="col-lg-2 offset-lg-4 col-sm-4">
+      <div class="col-xl-2 col-lg-4 offset-xl-4 offset-lg-2 col-sm-4 mt-3 mt-sm-0">
         <most-tab
-          label="back to top"
+          label="Back to Top"
           icon-name="chevron-up"
           style="border-radius: 10px;font-size: 16px"
           @click="backToTop()"
