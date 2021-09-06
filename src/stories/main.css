@@ -46,4 +46,8 @@ body{
   .most-credit > p {
     font-size: 14px;
   }
+
+  .most-link-button{
+    font-size: 22px;
+  }
 }

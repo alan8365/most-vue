@@ -26,7 +26,6 @@
           <a href="https://forms.gle/RtDKXFJdBFpBUjfM8">
             <button
               class="btn most-link-button"
-              style="font-size: 22px"
               v-text="'點此上傳資料'"
             />
           </a>

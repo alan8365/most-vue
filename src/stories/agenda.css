@@ -1,4 +1,10 @@
+.most-agenda a{
+ text-decoration: none;
+}
+
 .most-agenda{
+  font-family: "ヒラギノ角ゴシック";
+
   margin-top: 20px;
 }
 
@@ -13,7 +19,7 @@
 .most-agenda div{
   font-size: 30px;
 
-  border-radius: 30px;
+  border-radius: 20px;
 
   min-height: 80px;
 }
@@ -40,6 +46,7 @@
 .most-agenda-title > div:last-child{
   font-size: 44px;
 
+  margin: 0;
 }
 
 .most-agenda-header > div:first-child {
@@ -48,6 +55,8 @@
 
 .most-agenda-header > div:last-child {
   background-color: #FFDB5F;
+
+  color: white;
 }
 
 .most-agenda-row div {
@@ -64,4 +73,44 @@
 
 .most-agenda-row-text {
   padding: 17px 0;
+}
+
+@media (max-width: 768px) {
+  .most-agenda div{
+    font-size: 18px;
+
+    min-height: 38px;
+  }
+
+  .most-agenda-title > div:first-child{
+    font-size: 20px;
+  }
+
+  .most-agenda-title > div:last-child{
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .most-agenda div{
+    font-size: 17px;
+
+    min-height: 38px;
+  }
+
+  .most-agenda-title > div:first-child{
+    font-size: 17px;
+  }
+
+  .most-agenda-title > div:last-child{
+    font-size: 20px;
+  }
+
+  .most-agenda-row div {
+    font-size: 12px;
+  }
+
+  .most-agenda > div > div{
+    margin: 0 3px;
+  }
 }

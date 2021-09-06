@@ -1,7 +1,8 @@
 <template>
   <div>
     <most-info
-      title="110年度科技部科教發展及國際合作司 應科學學門成果發表會 會議議程表"
+      title="110年度 科技部科教發展及國際合作司 應科學學門成果發表會 會議議程表"
+      short-title="110年度 <br> 應用科學教育學門 <br> 成果發表會 會議議程表"
       :update-time="new Date('2020-10-31')"
       content-text=""
       :title-full="true"
@@ -17,14 +18,14 @@
         <div class="container most-agenda">
           <div class="row most-agenda-title">
             <div
-              class="col-2 "
+              class="col-5 col-md-4 col-lg-2 offset-10"
               :class="verticelCenter"
             >
               11/19
             </div>
+
             <div
-              class="col"
-              :class="verticelCenter"
+              class="col-12 mt-3 d-flex flex-column align-items-start justify-content-center"
             >
               第一天 、11月19日(星期五)
             </div>
@@ -90,13 +91,15 @@
               class="col"
               :class="verticelCenter"
             >
-              用餐會場(中商大樓二樓)
+              <a href="asd">
+                會議室(7203)
+              </a>
             </div>
             <div
               class="col"
               :class="verticelCenter"
             >
-              午餐
+              複審委員會議
             </div>
           </div>
         </div>

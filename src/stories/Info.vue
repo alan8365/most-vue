@@ -8,10 +8,10 @@
         v-if="title"
         class="most-info-title"
       >
-        <div>
+        <div class="most-info-title-dark">
           <div
             class="d-xl-flex justify-content-between d-none"
-            style="height:100%"
+            style="min-height: 62px"
           >
             <div class="d-flex align-items-center most-info-title-text">
               {{ title }}
@@ -29,9 +29,8 @@
           >
             <div
               class="most-info-title-text"
-            >
-              {{ title }}
-            </div>
+              v-html="getShortTitle()"
+            />
             <div
               class="most-info-time"
             >
@@ -42,7 +41,7 @@
           </div>
         </div>
 
-        <div />
+        <div class="most-info-title-white" />
       </div>
     </div>
 
@@ -78,6 +77,10 @@ export default {
       type: String,
       default: '',
     },
+    shortTitle: {
+      type: String,
+      default: '',
+    },
     titleFull: {
       type: Boolean,
       default: false,
@@ -103,6 +106,9 @@ export default {
       })),
       onClick() {
         emit('click');
+      },
+      getShortTitle() {
+        return props.shortTitle ? props.shortTitle : props.title;
       },
       getDate() {
         const date = props.updateTime;
