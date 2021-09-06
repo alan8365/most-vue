@@ -1,6 +1,6 @@
 <template>
   <div>
-    <most-info>
+    <most-info class="d-none d-md-block">
       <template #bottom>
         <img
           id="most-loading"
@@ -17,6 +17,22 @@
             marginwidth="0"
             onload="document.getElementById('most-loading').style.display='none';"
           />
+        </div>
+      </template>
+    </most-info>
+
+    <most-info
+      class="d-block d-md-none"
+    >
+      <template #bottom>
+        <div class="col-12">
+          <a href="https://forms.gle/ExcSW8V8Df7aeXs18">
+            <button
+              class="btn most-link-button"
+              style="font-size: 22px"
+              v-text="'點此進入線上報名'"
+            />
+          </a>
         </div>
       </template>
     </most-info>
