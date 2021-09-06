@@ -8,11 +8,11 @@
     >
       <template #bottom>
         <div
-          class="container px-5"
+          class="container px-0 px-lg-5"
           style="margin-bottom: 27px"
         >
           <div class="row gx-5">
-            <div class="col">
+            <div class="col-12 col-lg-4 mb-3 mb-lg-0">
               <most-meet-button
                 :label="'會議室A'"
                 :profssors="'(ＸＸＸ教授、ＸＸＸ教授、ＸＸＸ教授)'"
@@ -20,7 +20,8 @@
                 :font-color="'#F27373'"
               />
             </div>
-            <div class="col">
+
+            <div class="col-12 col-lg-4 mb-3 mb-lg-0">
               <most-meet-button
                 :label="'會議室B'"
                 :profssors="'(ＸＸＸ教授、ＸＸＸ教授、ＸＸＸ教授)'"
@@ -28,7 +29,7 @@
                 :font-color="'#F4D159'"
               />
             </div>
-            <div class="col">
+            <div class="col-12 col-lg-4">
               <most-meet-button
                 :label="'會議室C'"
                 :profssors="'(ＸＸＸ教授、ＸＸＸ教授、ＸＸＸ教授)'"

@@ -10,7 +10,10 @@
       {{ label }}
     </p>
 
-    <p style="font-size: 20px">
+    <p
+      class="my-0 my-md-4"
+      style="font-size: 20px"
+    >
       點此進入房間
     </p>
 
