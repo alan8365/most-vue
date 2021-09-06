@@ -4,6 +4,7 @@
       title="網站正式啟用!即日起開放上傳檔案!"
       content-text="「104年度應用科學教育學門成果發表暨研習會」官方網站於09月14日正式啟用，報名日期自即日起至10月20日(星期二)止；
       開放報告上傳日期請注意最新消息！"
+      class="d-none d-sm-block"
     >
       <template #bottom>
         <div class="col-12">
@@ -11,6 +12,22 @@
             <button
               class="btn most-link-button"
               v-text="'點此進入上傳檔案表單'"
+            />
+          </a>
+        </div>
+      </template>
+    </most-info>
+
+    <most-info
+      class="d-block d-sm-none"
+    >
+      <template #bottom>
+        <div class="col-12">
+          <a href="https://forms.gle/RtDKXFJdBFpBUjfM8">
+            <button
+              class="btn most-link-button"
+              style="font-size: 22px"
+              v-text="'點此上傳資料'"
             />
           </a>
         </div>
