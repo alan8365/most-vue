@@ -9,6 +9,7 @@
         class="most-info-title"
       >
         <div class="most-info-title-dark">
+          <!-- TODO display normal when no update time -->
           <div
             class="d-xl-flex justify-content-between d-none"
             style="min-height: 62px"
@@ -32,6 +33,7 @@
               v-html="getShortTitle()"
             />
             <div
+              v-if="updateTime"
               class="most-info-time"
             >
               <span v-if="updateTime">

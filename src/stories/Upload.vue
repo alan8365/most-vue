@@ -8,7 +8,10 @@
     >
       <template #bottom>
         <div class="col-12">
-          <a href="https://forms.gle/RtDKXFJdBFpBUjfM8">
+          <a
+            target="_blank"
+            href="https://forms.gle/RtDKXFJdBFpBUjfM8"
+          >
             <button
               class="btn most-link-button"
               v-text="'點此進入上傳檔案表單'"
@@ -23,7 +26,10 @@
     >
       <template #bottom>
         <div class="col-12">
-          <a href="https://forms.gle/RtDKXFJdBFpBUjfM8">
+          <a
+            target="_blank"
+            href="https://forms.gle/RtDKXFJdBFpBUjfM8"
+          >
             <button
               class="btn most-link-button"
               v-text="'點此上傳資料'"

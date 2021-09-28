@@ -26,7 +26,10 @@
     >
       <template #bottom>
         <div class="col-12">
-          <a href="https://forms.gle/ExcSW8V8Df7aeXs18">
+          <a
+            target="_blank"
+            href="https://forms.gle/ExcSW8V8Df7aeXs18"
+          >
             <button
               class="btn most-link-button"
               style="font-size: 22px"

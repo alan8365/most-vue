@@ -5,7 +5,7 @@
     <footer class="row">
       <div class="most-credit col-lg-6 col-sm-8 col-xs-8">
         <p>網站建置：國立臺中科技大學 資訊管理系</p>
-        <p>網站製作：路西</p>
+        <p>網站製作：路西｜Wonderful77</p>
       </div>
 
       <div class="col-xl-2 col-lg-4 offset-xl-4 offset-lg-2 col-sm-4 mt-3 mt-sm-0">
