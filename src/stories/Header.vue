@@ -68,7 +68,7 @@
         <div
           v-for="(tab, index) in tabs"
           :key="tab.label"
-          class="col-sm-4 mb-sm-3 col-md-4 col-lg-2"
+          class="col-sm-4 mb-sm-3 col-md-4 col-lg"
         >
           <router-link
             :to="tab.link || '/'"

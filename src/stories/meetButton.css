@@ -10,6 +10,9 @@
   box-shadow: #C1C1C1 5px 5px;
 
   text-decoration: none;
+
+  width: 100%;
+  max-width: 540px;
 }
 
 .most-meet-button > p{
