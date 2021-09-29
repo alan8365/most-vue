@@ -9,10 +9,12 @@
           style="margin-bottom: 27px"
         >
           <div class="row gx-5">
-            <div 
+            <div
               v-for="meetRoom in meetRooms"
               :key="meetRoom.id"
-              class="col-12 col-lg-6 mb-3 mb-lg-0">
+              class="col-12 col-lg-6 mb-3 mb-lg-0"
+            >
+              <!-- TODO hide professor before taget day -->
               <most-meet-button
                 v-bind="meetRoom"
                 class="mb-4"
@@ -57,30 +59,30 @@ export default {
       style: computed(() => ({
         backgroundColor: props.backgroundColor,
       })),
-      meetRooms:[
+      meetRooms: [
         {
-          label: '會議室A', 
-          profssors: '(ＸＸＸ教授、ＸＸＸ教授、ＸＸＸ教授)', 
-          backgroundColor:'#FFD8D8', 
-          fontColor:'#F27373'
+          label: '會議室A',
+          profssors: '(ＸＸＸ教授、ＸＸＸ教授、ＸＸＸ教授)',
+          backgroundColor: '#FFD8D8',
+          fontColor: '#F27373',
         },
         {
-          label: '會議室B', 
-          profssors: '(ＸＸＸ教授、ＸＸＸ教授、ＸＸＸ教授)', 
-          backgroundColor:'#FFF9D1', 
-          fontColor:'#F4D159'
+          label: '會議室B',
+          profssors: '(ＸＸＸ教授、ＸＸＸ教授、ＸＸＸ教授)',
+          backgroundColor: '#FFF9D1',
+          fontColor: '#F4D159',
         },
         {
-          label: '會議室C', 
-          profssors: '(ＸＸＸ教授、ＸＸＸ教授、ＸＸＸ教授)', 
-          backgroundColor:'#d1fff1', 
-          fontColor:'#67cb8d'
+          label: '會議室C',
+          profssors: '(ＸＸＸ教授、ＸＸＸ教授、ＸＸＸ教授)',
+          backgroundColor: '#d1fff1',
+          fontColor: '#67cb8d',
         },
         {
-          label: '會議室D', 
-          profssors: '(ＸＸＸ教授、ＸＸＸ教授、ＸＸＸ教授)', 
-          backgroundColor:'#D6F2FF', 
-          fontColor:'#6795CB'
+          label: '會議室D',
+          profssors: '(ＸＸＸ教授、ＸＸＸ教授、ＸＸＸ教授)',
+          backgroundColor: '#D6F2FF',
+          fontColor: '#6795CB',
         },
       ],
       onClick() {
