@@ -33,13 +33,16 @@ body{
 
 .most-link-button{
   font-family: "ヒラギノ角ゴシック";
+  font-size: 24px;
 
-  color: #5DA8FF;
+  color: white;
 
-  border: #5DA8FF 1px dashed;
+  background-color: #5DA8FF;
 
-  height: 90px;
+  height: 53px;
   width: 100%;
+
+  border-radius: 15px;
 }
 
 @media (max-width: 576px) {

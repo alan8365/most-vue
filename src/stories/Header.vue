@@ -109,9 +109,8 @@ export default {
     return {
       tabs: [
         {label: '最新消息', link: '/'},
-        {label: '會議流程', link: '/agenda'},
-        {label: '會議資訊', link: '/meet-info'},
-        {label: '線上報名', link: '/sign'},
+        {label: '會議議程', link: '/agenda'},
+        {label: '會議連結', link: '/meet-info'},
         {label: '上傳資料', link: '/upload'},
         {label: '聯絡我們', link: '/contact'},
       ],
