@@ -82,6 +82,14 @@
   margin: 0;
 }
 
+.most-hightlight-red{
+  color: #FF6565;
+}
+
+.most-hightlight-blue{
+  color: #5DA8FF;
+}
+
 @media (max-width: 1200px) {
   .most-info-title-text {
     font-size: 20px;
