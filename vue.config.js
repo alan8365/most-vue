@@ -9,5 +9,8 @@ module.exports = {
           args[0].title = 'MOST';
           return args;
         });
+    config.module.rule('pdf')
+      .test(/\.pdf$/)
+      .use('file-loader').loader('file-loader');
   },
 };

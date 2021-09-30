@@ -1,7 +1,7 @@
 <template>
   <div>
     <most-info
-      title="活動承辦聯絡人"
+      title="*活動承辦聯絡人"
       content-text="
       <h4>黃天麒</h4>
       <p>國立臺中科技大學資訊管理系教授兼研發處學術發展組組長</p>

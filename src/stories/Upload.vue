@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import "./upload.css";
+import './upload.css';
 import {reactive} from 'vue';
 
 import MostInfo from './Info';

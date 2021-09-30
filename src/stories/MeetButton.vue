@@ -18,7 +18,10 @@
       點此進入房間
     </p>
 
-    <p style="font-size: 12px">
+    <p
+      v-if="checkDate()"
+      style="font-size: 12px"
+    >
       {{ profssors }}
     </p>
   </a>
@@ -65,6 +68,12 @@ export default {
       })),
       onClick() {
         emit('click');
+      },
+      checkDate() {
+        const now = new Date();
+        const target = new Date('2021-11-19');
+
+        return now >= target;
       },
     };
   },
