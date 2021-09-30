@@ -10,7 +10,7 @@ module.exports = {
           return args;
         });
     config.module.rule('pdf')
-      .test(/\.pdf$/)
-      .use('file-loader').loader('file-loader');
+        .test(/\.pdf$/)
+        .use('file-loader').loader('file-loader');
   },
 };

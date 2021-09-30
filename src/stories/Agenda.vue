@@ -16,11 +16,11 @@
                 target="_blank"
                 style="width: 100%"
               > -->
-                <button
-                  disabled
-                  class="btn most-link-button"
-                  v-text="'點此下載詳細議程表'"
-                />
+              <button
+                disabled
+                class="btn most-link-button"
+                v-text="'點此下載詳細議程表'"
+              />
               <!-- </a> -->
             </div>
           </div>
@@ -39,7 +39,6 @@
             >
               第一天 、11月19日(星期五)
             </div>
-
           </div>
 
           <div class="row most-agenda-header">
@@ -146,12 +145,6 @@ export default {
 
   setup(props, {emit}) {
     props = reactive(props);
-    const meetingRoom = {
-      'A': {label: '會議室A', link: 'a'},
-      'B': {label: '會議室B', link: 'a'},
-      'C': {label: '會議室C', link: 'a'},
-      'D': {label: '會議室D', link: 'a'},
-    };
 
     const reportTimeList = [
       '10:30-12:00',
@@ -161,6 +154,31 @@ export default {
       '10:25-11:25',
     ];
 
+    const meetingRoom = {
+      'A': {label: '會議室A', link: 'a'},
+      'B': {label: '會議室B', link: 'a'},
+      'C': {label: '會議室C', link: 'a'},
+      'D': {label: '會議室D', link: 'a'},
+    };
+
+    const endMeetingNumbers = {
+      'A': {
+        4: 4,
+        5: 4,
+      },
+      'B': {
+        3: 4,
+        5: 3,
+      },
+      'C': {
+        5: 4,
+      },
+      'D': {
+        4: 4,
+        5: 3,
+      },
+    };
+
     const reportInfo = [];
 
     let count = 0;
@@ -168,9 +186,11 @@ export default {
       const temp = [];
       count++;
       for (const [key, value] of Object.entries(meetingRoom)) {
+        const endNumber = endMeetingNumbers[key][count] || 5;
+
         temp.push(
             {
-              label: `分組報告${key}場次${key}${count}1~${count}5`,
+              label: `分組報告${key}場次 ${key}${count}1~${count}${endNumber}`,
               time: time,
               meetLabel: value.label,
               meetLink: value.link,
