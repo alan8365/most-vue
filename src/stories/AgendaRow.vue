@@ -8,20 +8,33 @@
     </div>
 
     <div
+      v-if="data.length != 0 && label"
+      class="col most-agenda-column-normal"
+      :class="verticelCenter"
+    >
+      {{ label }}
+      <p class="most-agenda-comment" v-if="labelComment">
+        {{ labelComment }}
+      </p>
+    </div>
+
+    <div
       v-if="data.length != 0"
       class="col"
     >
       <div
         v-for="(datum, index) in data"
         :key="datum.id"
-        class="row"
+        class="row most-agenda-row-in-cloumn"
         :class="index != 0 ? 'mt-4' : 'mt-0'"
       >
         <div
+          v-if="!label"
           class="col most-agenda-column-normal"
           :class="verticelCenter"
         >
           {{ datum.label }}
+
         </div>
 
         <div
@@ -29,9 +42,12 @@
           class="col most-agenda-column-normal"
           :class="verticelCenter"
         >
-          <a :href="datum.meetLink">
+          <a :href="checkDate() ? datum.meetLink : '#a'">
             {{ datum.meetLabel }}
           </a>
+          <p class="most-agenda-comment" v-if="datum.meetComment">
+            {{ datum.meetComment }}
+          </p>
         </div>
       </div>
     </div>
@@ -49,7 +65,7 @@
       class="col most-agenda-column-normal"
       :class="verticelCenter"
     >
-      <a :href="meetLink">
+      <a :href="checkDate() ? meetLink : '#a'">
         {{ meetLabel }}
       </a>
     </div>
@@ -74,6 +90,10 @@ export default {
       },
     },
     label: {
+      type: String,
+      default: '',
+    },
+    labelComment: {
       type: String,
       default: '',
     },
@@ -102,6 +122,12 @@ export default {
       style: computed(() => ({
         backgroundColor: props.backgroundColor,
       })),
+      checkDate() {
+        const now = new Date();
+        const target = new Date('2021-11-19');
+
+        return now >= target;
+      },
     };
   },
 };

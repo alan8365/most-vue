@@ -20,8 +20,20 @@
   min-height: 80px;
 }
 
-.most-agenda > div > div, .most-agenda-column-normal{
+.most-agenda > div > div {
   margin: 0 10px;
+}
+
+.most-agenda-row-in-cloumn > div:first-child {
+  margin-right: 10px;
+}
+
+.most-agenda-row-in-cloumn > div:last-child {
+  margin-left: 10px;
+}
+
+.most-agenda-row-in-cloumn > div:only-child {
+  margin: 0px;
 }
 
 .most-agenda > div > div:first-child{
@@ -84,6 +96,10 @@
 
 .most-agenda-row-text {
   padding: 17px 0;
+}
+
+.most-agenda-comment {
+  font-size: 16px;
 }
 
 @media (max-width: 768px) {

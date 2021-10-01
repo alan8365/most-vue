@@ -10,18 +10,17 @@
       <template #bottom>
         <div class="container most-agenda">
           <div class="row">
-            <div class="col-4 d-flex flex-column align-items-start justify-content-center most-agenda-download">
-              <!-- <a
-                :href="pdfLink"
+            <div class="col-12 col-lg-4 d-flex flex-column align-items-start justify-content-center most-agenda-download">
+              <a
+                :href="`${publicPath}${pdfName}.pdf`"
                 target="_blank"
                 style="width: 100%"
-              > -->
-              <button
-                disabled
-                class="btn most-link-button"
-                v-text="'點此下載詳細議程表'"
-              />
-              <!-- </a> -->
+              >
+                <button
+                  class="btn most-link-button"
+                  v-text="'點此下載詳細議程表'"
+                />
+              </a>
             </div>
           </div>
           <div class="row most-agenda-title mt-5">
@@ -155,15 +154,17 @@ export default {
     ];
 
     const meetingRoom = {
-      'A': {label: '會議室A', link: 'a'},
-      'B': {label: '會議室B', link: 'a'},
-      'C': {label: '會議室C', link: 'a'},
-      'D': {label: '會議室D', link: 'a'},
+      'A': {label: '會議室A', link: '#'},
+      'B': {label: '會議室B', link: '#'},
+      'C': {label: '會議室C', link: '#'},
+      'D': {label: '會議室D', link: '#'},
     };
 
     const otherLink = {
-      'sign': {label: '簽到表單連結', link: 'a'},
-      'main': {label: '大會議室', link: 'a'},
+      'sign': {label: '簽到表單連結', link: '#'},
+      'main': {label: '大會議室', link: '#'},
+      'mainA': {label: '大會議室甲', link: '#', comment: '(北部、東部: 北北基、桃竹苗、宜花東、離島)'},
+      'mainB': {label: '大會議室乙', link: '#', comment: '(中南部: 台中以南至屏東、南投)'},
     };
 
     const endMeetingNumbers = {
@@ -179,6 +180,7 @@ export default {
         5: 4,
       },
       'D': {
+        2: 4,
         4: 4,
         5: 3,
       },
@@ -222,25 +224,9 @@ export default {
       backToTop() {
         window.scrollTo(0, 0);
       },
-      // pdfLink: require('../assets/分組議程時間表_V2.pdf'),
-      pdfLink: '#',
+      publicPath: process.env.BASE_URL,
+      pdfName: '應用科學教育學門成發會議議程與海報發表列表_2021.10.1',
       firstDayRows: [
-        {
-          time: '10:30',
-          data:
-           [
-             {
-               label: '線上簽到',
-               meetLabel: 'bububu',
-               meetLink: 'aaa',
-             },
-             {
-               label: '線上簽到',
-               meetLabel: 'bububu',
-               meetLink: 'aaa',
-             },
-           ],
-        },
         {
           label: '線上簽到',
           time: '10:15-10:30',
@@ -249,9 +235,20 @@ export default {
         },
         {
           label: '開幕/工作報告',
+          labelComment: '註: 因應會議人數上限，按學校校區所在地區分流',
           time: '10:00-10:30',
-          meetLabel: otherLink['main'].label,
-          meetLink: otherLink['main'].link,
+          data: [
+            {
+              meetLabel: otherLink['mainA'].label,
+              meetLink: otherLink['mainA'].link,
+              meetComment: otherLink['mainA'].comment,
+            },
+            {
+              meetLabel: otherLink['mainB'].label,
+              meetLink: otherLink['mainB'].link,
+              meetComment: otherLink['mainB'].comment,
+            },
+          ],
         },
         reportInfo[0],
         {
@@ -280,9 +277,20 @@ export default {
         reportInfo[4],
         {
           label: '應用科學教育學門綜合座談',
+          labelComment: '註: 因應會議人數上限，按學校校區所在地區分流',
           time: '11:30-12:00',
-          meetLabel: otherLink['main'].label,
-          meetLink: otherLink['main'].link,
+          data: [
+            {
+              meetLabel: otherLink['mainA'].label,
+              meetLink: otherLink['mainA'].link,
+              meetComment: otherLink['mainA'].comment,
+            },
+            {
+              meetLabel: otherLink['mainB'].label,
+              meetLink: otherLink['mainB'].link,
+              meetComment: otherLink['mainB'].comment,
+            },
+          ],
         },
       ],
     };
