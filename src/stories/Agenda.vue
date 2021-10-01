@@ -24,7 +24,7 @@
               <!-- </a> -->
             </div>
           </div>
-          <div class="row most-agenda-title">
+          <div class="row most-agenda-title mt-5">
             <div class="row">
               <div
                 class="col-5 col-md-4 col-lg-2 most-agenda-date"
@@ -161,6 +161,11 @@ export default {
       'D': {label: '會議室D', link: 'a'},
     };
 
+    const otherLink = {
+      'sign': {label: '簽到表單連結', link: 'a'},
+      'main': {label: '大會議室', link: 'a'},
+    };
+
     const endMeetingNumbers = {
       'A': {
         4: 4,
@@ -183,20 +188,24 @@ export default {
 
     let count = 0;
     for (const time of reportTimeList) {
-      const temp = [];
+      const temp = {
+        time: time,
+        data: [],
+      };
       count++;
+
       for (const [key, value] of Object.entries(meetingRoom)) {
         const endNumber = endMeetingNumbers[key][count] || 5;
 
-        temp.push(
+        temp.data.push(
             {
               label: `分組報告${key}場次 ${key}${count}1~${count}${endNumber}`,
-              time: time,
               meetLabel: value.label,
               meetLink: value.link,
             },
         );
       }
+
       reportInfo.push(temp);
     }
 
@@ -217,45 +226,63 @@ export default {
       pdfLink: '#',
       firstDayRows: [
         {
+          time: '10:30',
+          data:
+           [
+             {
+               label: '線上簽到',
+               meetLabel: 'bububu',
+               meetLink: 'aaa',
+             },
+             {
+               label: '線上簽到',
+               meetLabel: 'bububu',
+               meetLink: 'aaa',
+             },
+           ],
+        },
+        {
           label: '線上簽到',
           time: '10:15-10:30',
-          meetLabel: meetingRoom['A'].label,
-          meetLink: meetingRoom['A'].link,
+          meetLabel: otherLink['sign'].label,
+          meetLink: otherLink['sign'].link,
         },
         {
           label: '開幕/工作報告',
           time: '10:00-10:30',
-          meetLabel: meetingRoom['A'].label,
-          meetLink: meetingRoom['A'].link,
+          meetLabel: otherLink['main'].label,
+          meetLink: otherLink['main'].link,
         },
-        ...reportInfo[0],
+        reportInfo[0],
         {
           label: '中午休息',
           time: '12:00-14:00',
         },
-        ...reportInfo[1],
+        reportInfo[1],
         {
           label: '中場休息',
           time: '15:15-15:30',
         },
-        ...reportInfo[2],
+        reportInfo[2],
       ],
       secondDayRows: [
         {
           label: '線上簽到',
           time: '8:45-9:00',
-          meetLabel: meetingRoom['A'].label,
-          meetLink: meetingRoom['A'].link,
+          meetLabel: otherLink['sign'].label,
+          meetLink: otherLink['sign'].link,
         },
-        ...reportInfo[3],
+        reportInfo[3],
         {
           label: '中場休息',
           time: '10:15-10:25',
         },
-        ...reportInfo[4],
+        reportInfo[4],
         {
-          label: '應用科學教育學們綜合座談',
+          label: '應用科學教育學門綜合座談',
           time: '11:30-12:00',
+          meetLabel: otherLink['main'].label,
+          meetLink: otherLink['main'].link,
         },
       ],
     };

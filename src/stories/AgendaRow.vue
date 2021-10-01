@@ -1,5 +1,5 @@
 <template>
-  <div class="row most-agenda-row">
+  <div class="row most-agenda-row mt-4">
     <div
       class="col-4"
       :class="verticelCenter"
@@ -8,15 +8,45 @@
     </div>
 
     <div
+      v-if="data.length != 0"
       class="col"
+    >
+      <div
+        v-for="(datum, index) in data"
+        :key="datum.id"
+        class="row"
+        :class="index != 0 ? 'mt-4' : 'mt-0'"
+      >
+        <div
+          class="col most-agenda-column-normal"
+          :class="verticelCenter"
+        >
+          {{ datum.label }}
+        </div>
+
+        <div
+          v-if="datum.meetLabel"
+          class="col most-agenda-column-normal"
+          :class="verticelCenter"
+        >
+          <a :href="datum.meetLink">
+            {{ datum.meetLabel }}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div
+      v-if="data.length == 0"
+      class="col most-agenda-column-normal"
       :class="verticelCenter"
     >
       {{ label }}
     </div>
 
     <div
-      v-if="meetLabel"
-      class="col"
+      v-if="meetLabel && data.length == 0"
+      class="col most-agenda-column-normal"
       :class="verticelCenter"
     >
       <a :href="meetLink">
@@ -37,6 +67,12 @@ export default {
   },
 
   props: {
+    data: {
+      type: Array,
+      default: function() {
+        return [];
+      },
+    },
     label: {
       type: String,
       default: '',

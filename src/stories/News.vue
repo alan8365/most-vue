@@ -3,6 +3,11 @@
     <most-info
       title="最新消息"
       :update-time="new Date('2021-09-30')"
+      content-text="<ul>
+<li>本年度因受疫情影響，為確保各位老師能在最安全的環境下與會，改採線上會議形式舉辦，還請各位老師體諒。</li>
+<li>本次會議預計採用Google Meet作為視訊軟體，請各位發表教師事前先行測試視訊設備，以利發表過程之進行。</li>
+</ul>
+"
     />
 
     <most-info
