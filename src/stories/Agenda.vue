@@ -154,17 +154,17 @@ export default {
     ];
 
     const meetingRoom = {
-      'A': {label: '會議室A', link: '#'},
-      'B': {label: '會議室B', link: '#'},
-      'C': {label: '會議室C', link: '#'},
-      'D': {label: '會議室D', link: '#'},
+      'A': {label: '會議室A', link: ''},
+      'B': {label: '會議室B', link: ''},
+      'C': {label: '會議室C', link: ''},
+      'D': {label: '會議室D', link: ''},
     };
 
     const otherLink = {
-      'sign': {label: '簽到表單連結', link: '#'},
-      'main': {label: '大會議室', link: '#'},
-      'mainA': {label: '大會議室甲', link: '#', comment: '(北部、東部: 北北基、桃竹苗、宜花東、離島)'},
-      'mainB': {label: '大會議室乙', link: '#', comment: '(中南部: 台中以南至屏東、南投)'},
+      'sign': {label: '簽到表單連結', link: 'https://docs.google.com/forms/d/e/1FAIpQLSfeWR1loT7iFKL8Smjk8pdRVOjkTQCa6OOYM8o9m0NBEnAuEg/viewform?usp=send_form'},
+      'main': {label: '大會議室', link: ''},
+      'mainA': {label: '大會議室甲', link: '', comment: '(北部、東部: 北北基、桃竹苗、宜花東、離島)'},
+      'mainB': {label: '大會議室乙', link: '', comment: '(中南部: 台中以南至屏東、南投)'},
     };
 
     const endMeetingNumbers = {

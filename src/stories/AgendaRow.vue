@@ -13,7 +13,10 @@
       :class="verticelCenter"
     >
       {{ label }}
-      <p class="most-agenda-comment" v-if="labelComment">
+      <p
+        v-if="labelComment"
+        class="most-agenda-comment"
+      >
         {{ labelComment }}
       </p>
     </div>
@@ -34,7 +37,6 @@
           :class="verticelCenter"
         >
           {{ datum.label }}
-
         </div>
 
         <div
@@ -42,10 +44,16 @@
           class="col most-agenda-column-normal"
           :class="verticelCenter"
         >
-          <a :href="checkDate() ? datum.meetLink : '#a'">
+          <a
+            :href="meetLink ? meetLink : '#please-wait'"
+            target="_blank"
+          >
             {{ datum.meetLabel }}
           </a>
-          <p class="most-agenda-comment" v-if="datum.meetComment">
+          <p
+            v-if="datum.meetComment"
+            class="most-agenda-comment"
+          >
             {{ datum.meetComment }}
           </p>
         </div>
@@ -65,7 +73,10 @@
       class="col most-agenda-column-normal"
       :class="verticelCenter"
     >
-      <a :href="checkDate() ? meetLink : '#a'">
+      <a
+        :href="meetLink ? meetLink : '#please-wait'"
+        target="_blank"
+      >
         {{ meetLabel }}
       </a>
     </div>
