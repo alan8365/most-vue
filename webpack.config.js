@@ -1,7 +1,7 @@
 module.exports = function(config, {isClient, isDev}) {
   module: {
     rules: [{
-      test: /\.(woff|woff2|eot|ttf|svg|pdf)(\?.*$|$)/,
+      test: /\.(woff|woff2|eot|ttf|svg|pdf|docx)(\?.*$|$)/,
       loader: 'file-loader',
     }];
   }
