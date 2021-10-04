@@ -13,7 +13,10 @@
       :class="verticelCenter"
     >
       {{ label }}
-      <p class="most-agenda-comment" v-if="labelComment">
+      <p
+        v-if="labelComment"
+        class="most-agenda-comment"
+      >
         {{ labelComment }}
       </p>
     </div>
@@ -34,7 +37,6 @@
           :class="verticelCenter"
         >
           {{ datum.label }}
-
         </div>
 
         <div
@@ -45,7 +47,10 @@
           <a :href="checkDate() ? datum.meetLink : '#a'">
             {{ datum.meetLabel }}
           </a>
-          <p class="most-agenda-comment" v-if="datum.meetComment">
+          <p
+            v-if="datum.meetComment"
+            class="most-agenda-comment"
+          >
             {{ datum.meetComment }}
           </p>
         </div>

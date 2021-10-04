@@ -169,11 +169,9 @@ export default {
 
     const endMeetingNumbers = {
       'A': {
-        4: 4,
         5: 4,
       },
       'B': {
-        3: 4,
         5: 3,
       },
       'C': {
@@ -181,8 +179,7 @@ export default {
       },
       'D': {
         2: 4,
-        4: 4,
-        5: 3,
+        5: 4,
       },
     };
 
