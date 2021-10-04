@@ -44,7 +44,10 @@
           class="col most-agenda-column-normal"
           :class="verticelCenter"
         >
-          <a :href="checkDate() ? datum.meetLink : '#a'">
+          <a
+            :href="meetLink ? meetLink : '#please-wait'"
+            target="_blank"
+          >
             {{ datum.meetLabel }}
           </a>
           <p
@@ -70,7 +73,10 @@
       class="col most-agenda-column-normal"
       :class="verticelCenter"
     >
-      <a :href="checkDate() ? meetLink : '#a'">
+      <a
+        :href="meetLink ? meetLink : '#please-wait'"
+        target="_blank"
+      >
         {{ meetLabel }}
       </a>
     </div>
