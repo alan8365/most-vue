@@ -173,6 +173,7 @@ export default {
       'main': {label: '大會議室', link: ''},
       'mainA': {label: '大會議室甲', link: '', comment: '(北部、東部: 北北基、桃竹苗、宜花東、離島)'},
       'mainB': {label: '大會議室乙', link: '', comment: '(中南部: 台中以南至屏東、南投)'},
+      'mainC': {label: '大會議室丙', link: '', comment: '(碩博士研究生)'},
     };
 
     const endMeetingNumbers = {
@@ -272,6 +273,11 @@ export default {
               meetLink: otherLink['mainB'].link,
               meetComment: otherLink['mainB'].comment,
             },
+            {
+              meetLabel: otherLink['mainC'].label,
+              meetLink: otherLink['mainC'].link,
+              meetComment: otherLink['mainC'].comment,
+            },
           ],
         },
         reportInfo[0],
@@ -313,6 +319,11 @@ export default {
               meetLabel: otherLink['mainB'].label,
               meetLink: otherLink['mainB'].link,
               meetComment: otherLink['mainB'].comment,
+            },
+            {
+              meetLabel: otherLink['mainC'].label,
+              meetLink: otherLink['mainC'].link,
+              meetComment: otherLink['mainC'].comment,
             },
           ],
         },

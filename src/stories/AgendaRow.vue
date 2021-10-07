@@ -46,7 +46,7 @@
         >
           <a
             :href="meetLink ? meetLink : '#please-wait'"
-            target="_blank"
+            :target="meetLInk ? '_blank' : ''"
           >
             {{ datum.meetLabel }}
           </a>
@@ -73,9 +73,10 @@
       class="col most-agenda-column-normal"
       :class="verticelCenter"
     >
+      <!-- TODO target invalid -->
       <a
         :href="meetLink ? meetLink : '#please-wait'"
-        target="_blank"
+        :target="meetLInk ? '_blank' : ''"
       >
         {{ meetLabel }}
       </a>
