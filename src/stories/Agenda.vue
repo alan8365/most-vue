@@ -12,7 +12,10 @@
           <div class="row">
             <div class="col-12 col-lg-4 d-flex flex-column align-items-start justify-content-center most-agenda-download">
               <p style="font-size: 20px;color: red">
-                <font-awesome-icon icon="spinner" class="fa-spin" />
+                <font-awesome-icon
+                  icon="spinner"
+                  class="fa-spin"
+                />
                 最後更新時間：{{ getLastModifiedTime() }}
               </p>
 
@@ -151,7 +154,7 @@ export default {
   setup(props, {emit}) {
     props = reactive(props);
     // const axios = inject('axios'); // inject axios
-    const pdfName = '應用科學教育學門成發會議議程與海報發表列表_2021.10.1.pdf';
+    const pdfName = '應用科學教育學門成發會議議程與海報發表列表_2021.10.15.pdf';
 
     const reportTimeList = [
       '10:30-12:00',
@@ -234,7 +237,7 @@ export default {
       pdfName: pdfName,
       getLastModifiedTime() {
         // const url = `time`;
-        const date = new Date('2021-10-07');
+        const date = new Date('2021-10-15');
         // axios
         //     .get(url)
         //     .then(function(res) {
