@@ -154,12 +154,12 @@ export default {
   setup(props, {emit}) {
     props = reactive(props);
     // const axios = inject('axios'); // inject axios
-    const pdfName = '應用科學教育學門成發會議議程與海報發表列表_2021.10.15.pdf';
+    const pdfName = '應用科學教育學門成發會議議程與海報發表列表_2021.10.18.pdf';
 
     const reportTimeList = [
       '10:30-12:00',
       '14:00-15:15',
-      '15:30-17:00',
+      '15:30-17:15',
       '9:00-10:15',
       '10:25-11:25',
     ];
@@ -181,16 +181,19 @@ export default {
 
     const endMeetingNumbers = {
       'A': {
+        3: 6,
         5: 4,
       },
       'B': {
-        5: 3,
-      },
-      'C': {
+        3: 7,
         5: 4,
       },
+      'C': {
+        3: 7,
+      },
       'D': {
-        2: 4,
+        2: 6,
+        3: 7,
         5: 4,
       },
     };
@@ -237,7 +240,7 @@ export default {
       pdfName: pdfName,
       getLastModifiedTime() {
         // const url = `time`;
-        const date = new Date('2021-10-15');
+        const date = new Date('2021-10-18');
         // axios
         //     .get(url)
         //     .then(function(res) {
@@ -322,11 +325,6 @@ export default {
               meetLabel: otherLink['mainB'].label,
               meetLink: otherLink['mainB'].link,
               meetComment: otherLink['mainB'].comment,
-            },
-            {
-              meetLabel: otherLink['mainC'].label,
-              meetLink: otherLink['mainC'].link,
-              meetComment: otherLink['mainC'].comment,
             },
           ],
         },
