@@ -3,7 +3,7 @@
     <most-info
       title="109年度 科技部科教發展及國際合作司 應科學學門成果發表會 會議議程表"
       short-title="109年度 <br> 應用科學教育學門 <br> 成果發表會 會議議程表"
-      :update-time="new Date('2020-10-15')"
+      :update-time="new Date('2020-10-19')"
       content-text=""
       :title-full="true"
     >
@@ -154,7 +154,7 @@ export default {
   setup(props, {emit}) {
     props = reactive(props);
     // const axios = inject('axios'); // inject axios
-    const pdfName = '應用科學教育學門成發會議議程與海報發表列表_2021.10.18.pdf';
+    const pdfName = '應用科學教育學門成發會議議程與海報發表列表_2021.10.19.pdf';
 
     const reportTimeList = [
       '10:30-12:00',
@@ -240,7 +240,7 @@ export default {
       pdfName: pdfName,
       getLastModifiedTime() {
         // const url = `time`;
-        const date = new Date('2021-10-18');
+        const date = new Date('2021-10-19');
         // axios
         //     .get(url)
         //     .then(function(res) {
