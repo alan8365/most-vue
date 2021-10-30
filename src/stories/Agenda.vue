@@ -3,7 +3,7 @@
     <most-info
       title="109年度 科技部科教發展及國際合作司 應科學學門成果發表會 會議議程表"
       short-title="109年度 <br> 應用科學教育學門 <br> 成果發表會 會議議程表"
-      :update-time="new Date('2020-10-25')"
+      :update-time="new Date('2020-10-31')"
       content-text=""
       :title-full="true"
     >
@@ -213,7 +213,7 @@ export default {
 
         temp.data.push(
             {
-              label: `分組報告${key}場次 ${key}${count}1~${count}${endNumber}`,
+              label: `分組報告${key}  ${key}${count}-1 ~ ${key}${count}-${endNumber}`,
               meetLabel: value.label,
               meetLink: value.link,
             },
@@ -313,18 +313,12 @@ export default {
         reportInfo[4],
         {
           label: '應用科學教育學門綜合座談',
-          labelComment: '註: 因應會議人數上限，按學校校區所在地區分流',
+          labelComment: '綜合座談採直播形式',
           time: '11:30-12:00',
           data: [
             {
-              meetLabel: otherLink['mainA'].label,
-              meetLink: otherLink['mainA'].link,
-              meetComment: otherLink['mainA'].comment,
-            },
-            {
-              meetLabel: otherLink['mainB'].label,
-              meetLink: otherLink['mainB'].link,
-              meetComment: otherLink['mainB'].comment,
+              meetLabel: otherLink['main'].label,
+              meetLink: otherLink['main'].link,
             },
           ],
         },
