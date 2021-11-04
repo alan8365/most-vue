@@ -3,7 +3,7 @@
     <most-info
       title="109年度 科技部科教發展及國際合作司 應科學學門成果發表會 會議議程表"
       short-title="109年度 <br> 應用科學教育學門 <br> 成果發表會 會議議程表"
-      :update-time="new Date('2020-11-01')"
+      :update-time="new Date('2020-11-04')"
       content-text=""
       :title-full="true"
     >
@@ -154,7 +154,7 @@ export default {
   setup(props, {emit}) {
     props = reactive(props);
     // const axios = inject('axios'); // inject axios
-    const pdfName = '應用科學教育學門成發會議議程與海報發表列表_2021.11.01.pdf';
+    const pdfName = '應用科學教育學門成發會議議程與海報發表列表_2021.11.04.pdf';
 
     const reportTimeList = [
       '10:30-12:00',
@@ -240,7 +240,7 @@ export default {
       pdfName: pdfName,
       getLastModifiedTime() {
         // const url = `time`;
-        const date = new Date('2021-11-01');
+        const date = new Date('2021-11-04');
         // axios
         //     .get(url)
         //     .then(function(res) {
@@ -288,8 +288,19 @@ export default {
         },
         reportInfo[0],
         {
+          label: '司長對應用科學教育學門的期勉',
+          labelComment: '長官致詞採直播形式',
+          time: '12:10-12:15',
+          data: [
+            {
+              meetLabel: otherLink['main'].label,
+              meetLink: otherLink['main'].link,
+            },
+          ],
+        },
+        {
           label: '中午休息',
-          time: '12:00-14:00',
+          time: '12:15-14:00',
         },
         reportInfo[1],
         {
