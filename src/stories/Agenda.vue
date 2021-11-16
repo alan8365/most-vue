@@ -165,15 +165,15 @@ export default {
     ];
 
     const meetingRoom = {
-      'A': {label: '會議室A', link: ''},
-      'B': {label: '會議室B', link: ''},
-      'C': {label: '會議室C', link: ''},
-      'D': {label: '會議室D', link: ''},
+      'A': {label: '會議室A', link: 'https://meet.google.com/qbc-jzee-cvi'},
+      'B': {label: '會議室B', link: 'https://meet.google.com/tcn-wcej-uao'},
+      'C': {label: '會議室C', link: 'https://meet.google.com/hxy-cxwu-hyh'},
+      'D': {label: '會議室D', link: 'https://meet.google.com/qip-ktfr-faq'},
     };
 
     const otherLink = {
       'sign': {label: '簽到表單連結', link: 'https://docs.google.com/forms/d/e/1FAIpQLSfeWR1loT7iFKL8Smjk8pdRVOjkTQCa6OOYM8o9m0NBEnAuEg/viewform?usp=send_form'},
-      'main': {label: '大會議室', link: ''},
+      'main': {label: '大會議室', link: 'https://meet.google.com/vgf-afch-vpj'},
       'mainA': {label: '大會議室甲', link: '', comment: '(北部、東部: 北北基、桃竹苗、宜花東、離島)'},
       'mainB': {label: '大會議室乙', link: '', comment: '(中南部: 台中以南至屏東、南投)'},
       'mainC': {label: '大會議室丙', link: '', comment: '(碩博士研究生)'},

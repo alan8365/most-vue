@@ -2,12 +2,13 @@
   <div>
     <most-info
       title="最新消息"
-      :update-time="new Date('2021-10-17')"
+      :update-time="new Date('2021-11-16')"
       content-text="<ul>
 <li>本年度因受疫情影響，為確保各位老師能在最安全的環境下與會，改採線上會議形式舉辦，還請各位老師體諒。</li>
 <li>本次會議預計採用Google Meet作為視訊軟體，請各位發表教師事前先行測試視訊設備，以利發表過程之進行。</li>
 <li>為讓各位發表教師皆能順利完成成果發表，議程時間或有變動，請各位發表教師留意最新議程檔案。</li>
 <li>因會議將至，會議議程即將定稿付梓，若發表教師有需調整報告時段，請於10/20前以email通知，謝謝。</li>
+<li><a target='_blank' href='http://most.nutc.edu.tw/most/%E6%87%89%E7%94%A8%E7%A7%91%E5%AD%B8%E6%95%99%E8%82%B2%E5%AD%B8%E9%96%80%E6%88%90%E7%99%BC%E6%B4%BB%E5%8B%95%E6%89%8B%E5%86%8A.pdf'>線上會議議程與操作說明手冊</a></li>
 </ul>
 "
     />
@@ -25,7 +26,7 @@
 <br>
 (五) 口頭報告架構宜符合徵求重點（敘明原計畫書所選之重點代號）、自選主題者應具科教內涵，報告時宜強調計畫緣起、研究方法、研究結果及社會貢獻，並於10分鐘之內結束報告。
 <br>
-(六) 計畫成果上傳網址為 http://most.nutc.edu.tw/most/upload"
+(六) 計畫成果上傳網址為 <a href='http://most.nutc.edu.tw/most/upload'>http://most.nutc.edu.tw/most/upload</a>"
     />
   </div>
 </template>

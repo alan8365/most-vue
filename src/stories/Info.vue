@@ -55,7 +55,7 @@
       <p
         v-for="text in getContentTexts()"
         :key="text.id"
-        v-html="urlify(text)"
+        v-html="text"
       />
     </div>
 
