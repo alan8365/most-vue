@@ -3,7 +3,7 @@
     <most-info
       title="109年度 科技部科教發展及國際合作司 應科學學門成果發表會 會議議程表"
       short-title="109年度 <br> 應用科學教育學門 <br> 成果發表會 會議議程表"
-      :update-time="new Date('2020-11-04')"
+      :update-time="new Date('2020-11-18')"
       content-text=""
       :title-full="true"
     >
@@ -174,9 +174,13 @@ export default {
     const otherLink = {
       'sign': {label: '簽到表單連結', link: 'https://docs.google.com/forms/d/e/1FAIpQLSfeWR1loT7iFKL8Smjk8pdRVOjkTQCa6OOYM8o9m0NBEnAuEg/viewform?usp=send_form'},
       'main': {label: '大會議室', link: 'https://meet.google.com/vgf-afch-vpj'},
+      'open': {label: '開幕大會議室', link: 'https://meet.google.com/vgf-afch-vpj'},
+      'speech': {label: '司長致詞專屬會議室', link: 'https://meet.google.com/cqy-qhsf-uwr'},
+      'close': {label: '閉幕大會議室', link: 'https://meet.google.com/jco-esyb-cun'},
       'mainA': {label: '大會議室甲', link: '', comment: '(北部、東部: 北北基、桃竹苗、宜花東、離島)'},
       'mainB': {label: '大會議室乙', link: '', comment: '(中南部: 台中以南至屏東、南投)'},
       'mainC': {label: '大會議室丙', link: '', comment: '(碩博士研究生)'},
+      'youtube': {label: '直播連結', link: '', comment: ''},
     };
 
     const endMeetingNumbers = {
@@ -266,23 +270,12 @@ export default {
         },
         {
           label: '開幕/工作報告',
-          labelComment: '註: 因應會議人數上限，按學校校區所在地區分流',
           time: '10:00-10:30',
           data: [
             {
-              meetLabel: otherLink['mainA'].label,
-              meetLink: otherLink['mainA'].link,
-              meetComment: otherLink['mainA'].comment,
-            },
-            {
-              meetLabel: otherLink['mainB'].label,
-              meetLink: otherLink['mainB'].link,
-              meetComment: otherLink['mainB'].comment,
-            },
-            {
-              meetLabel: otherLink['mainC'].label,
-              meetLink: otherLink['mainC'].link,
-              meetComment: otherLink['mainC'].comment,
+              meetLabel: otherLink['open'].label,
+              meetLink: otherLink['open'].link,
+              meetComment: otherLink['main'].comment,
             },
           ],
         },
@@ -293,8 +286,12 @@ export default {
           time: '12:10-12:15',
           data: [
             {
-              meetLabel: otherLink['main'].label,
-              meetLink: otherLink['main'].link,
+              meetLabel: otherLink['speech'].label,
+              meetLink: otherLink['speech'].link,
+            },
+            {
+              meetLabel: otherLink['youtube'].label,
+              meetLink: otherLink['youtube'].link,
             },
           ],
         },
@@ -328,8 +325,12 @@ export default {
           time: '11:30-12:00',
           data: [
             {
-              meetLabel: otherLink['main'].label,
-              meetLink: otherLink['main'].link,
+              meetLabel: otherLink['close'].label,
+              meetLink: otherLink['close'].link,
+            },
+            {
+              meetLabel: otherLink['youtube'].label,
+              meetLink: otherLink['youtube'].link,
             },
           ],
         },

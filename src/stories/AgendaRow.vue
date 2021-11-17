@@ -45,8 +45,8 @@
           :class="verticelCenter"
         >
           <a
-            :href="meetLink ? meetLink : '#please-wait'"
-            :target="meetLInk ? '_blank' : ''"
+            :href="datum.meetLink ? datum.meetLink : '#please-wait'"
+            :target="'_blank'"
           >
             {{ datum.meetLabel }}
           </a>
