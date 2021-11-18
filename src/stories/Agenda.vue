@@ -161,7 +161,7 @@ export default {
       '14:00-15:15',
       '15:30-17:15',
       '9:00-10:15',
-      '10:25-11:25',
+      '10:25-11:40',
     ];
 
     const meetingRoom = {
@@ -180,7 +180,7 @@ export default {
       'mainA': {label: '大會議室甲', link: '', comment: '(北部、東部: 北北基、桃竹苗、宜花東、離島)'},
       'mainB': {label: '大會議室乙', link: '', comment: '(中南部: 台中以南至屏東、南投)'},
       'mainC': {label: '大會議室丙', link: '', comment: '(碩博士研究生)'},
-      'youtube': {label: '直播連結', link: '', comment: ''},
+      'youtube': {label: '直播連結', link: 'https://youtu.be/JqRNfGIJNs4', comment: ''},
     };
 
     const endMeetingNumbers = {
@@ -321,16 +321,11 @@ export default {
         reportInfo[4],
         {
           label: '應用科學教育學門綜合座談',
-          labelComment: '綜合座談採直播形式',
-          time: '11:30-12:00',
+          time: '11:40-12:00',
           data: [
             {
               meetLabel: otherLink['close'].label,
               meetLink: otherLink['close'].link,
-            },
-            {
-              meetLabel: otherLink['youtube'].label,
-              meetLink: otherLink['youtube'].link,
             },
           ],
         },

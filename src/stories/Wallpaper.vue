@@ -19,7 +19,7 @@
                   style="font-size: 40px"
                 />
                 <p style="font-size: 26px">
-                  點此預覽壁畫
+                  點此預覽壁報
                 </p>
               </button>
             </a>
@@ -32,26 +32,14 @@
       class="d-block d-sm-none"
     >
       <template #bottom>
-        <div class="row">
-          <div
-            v-for="link in links"
-            :key="link.id"
-            class="col-12 mb-4"
-          >
-            <most-upload-link
-              v-bind="link"
-            />
-          </div>
-        </div>
-
         <div class="col-12">
           <a
             target="_blank"
-            href="https://forms.gle/RtDKXFJdBFpBUjfM8"
+            href="https://reurl.cc/828vLM"
           >
             <button
               class="btn most-upload-button"
-              v-text="'點此上傳資料'"
+              v-text="'點此預覽壁報'"
             />
           </a>
         </div>
@@ -65,14 +53,12 @@ import './upload.css';
 import {reactive} from 'vue';
 
 import MostInfo from './Info';
-import MostUploadLink from './UploadLink';
 
 export default {
   name: 'MostUpload',
 
   components: {
     MostInfo,
-    MostUploadLink,
   },
 
   props: {
