@@ -1,7 +1,7 @@
 <template>
   <div>
     <most-info
-      title="109年度 科技部科教發展及國際合作司 應科學學門成果發表會 會議議程表"
+      title="109年度 科技部人文及社會科學研究發展司 應用科學教育學門成果發表會 會議議程表"
       short-title="109年度 <br> 應用科學教育學門 <br> 成果發表會 會議議程表"
       :update-time="new Date('2020-11-18')"
       content-text=""
