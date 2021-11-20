@@ -6,7 +6,10 @@
     >
       <template #bottom>
         <div class="row">
-          <div class="col-12 col-md-6 mt-4">
+          <div
+            v-if="checkDate()"
+            class="col-12 col-md-6 mt-4"
+          >
             <a
               target="_blank"
               href="https://reurl.cc/828vLM"
@@ -24,6 +27,13 @@
               </button>
             </a>
           </div>
+
+          <!-- <div
+            v-if="!checkDate()"
+            style="font-size: 22px;text-align: left"
+          >
+            本年度成果發表壁報展示已結束，感謝各位與會者的參與與支持
+          </div> -->
         </div>
       </template>
     </most-info>
@@ -32,8 +42,11 @@
       class="d-block d-sm-none"
     >
       <template #bottom>
-        <div class="col-12">
+        <div
+          class="col-12"
+        >
           <a
+            v-if="checkDate()"
             target="_blank"
             href="https://reurl.cc/828vLM"
           >
@@ -42,6 +55,13 @@
               v-text="'點此預覽壁報'"
             />
           </a>
+
+          <div
+            v-if="!checkDate()"
+            style="font-size: 22px;"
+          >
+            本年度成果發表壁報展示已結束，感謝各位與會者的參與與支持
+          </div>
         </div>
       </template>
     </most-info>
@@ -78,6 +98,12 @@ export default {
     return {
       onClick() {
         emit('click');
+      },
+      checkDate() {
+        const now = new Date();
+        const target = new Date('2021-11-20 11:40');
+
+        return now < target;
       },
       links: [
         {

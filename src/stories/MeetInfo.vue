@@ -62,28 +62,24 @@ export default {
       meetRooms: [
         {
           label: '會議室A',
-          profssors: '(ＸＸＸ教授、ＸＸＸ教授、ＸＸＸ教授)',
           backgroundColor: '#FFD8D8',
           fontColor: '#F27373',
           href: 'https://meet.google.com/qbc-jzee-cvi',
         },
         {
           label: '會議室B',
-          profssors: '(ＸＸＸ教授、ＸＸＸ教授、ＸＸＸ教授)',
           backgroundColor: '#FFF9D1',
           fontColor: '#F4D159',
           href: 'https://meet.google.com/tcn-wcej-uao',
         },
         {
           label: '會議室C',
-          profssors: '(ＸＸＸ教授、ＸＸＸ教授、ＸＸＸ教授)',
           backgroundColor: '#d1fff1',
           fontColor: '#67cb8d',
           href: 'https://meet.google.com/hxy-cxwu-hyh',
         },
         {
           label: '會議室D',
-          profssors: '(ＸＸＸ教授、ＸＸＸ教授、ＸＸＸ教授)',
           backgroundColor: '#D6F2FF',
           fontColor: '#6795CB',
           href: 'https://meet.google.com/qip-ktfr-faq',
